@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,13 +12,22 @@
     <nav>
         
     </nav>
-    <main class=" min-h-screen bg-[#1a1b26]">
-        <section class="home">
+    <main class=" min-h-screen">
+        <section class="home hidden">
             <h1 class="font-strike">Hello</h1>
         </section>
         <section class="play-ground">
-            <!-- display -->
-            <div class="artboard artboard-horizontal phone-5">896×414</div>
+            <div class=" flex flex-col justify-center items-center gap-5">
+                  <!-- display -->
+            <div class="artboard artboard-horizontal phone-5 border-[10px] rounded-2xl  border-[#1f293cc1] bg-[#ffffffbd] mt-32">
+                <div class="flex justify-center">
+                    <p class="bg-[#1f293cc1] px-6 pb-4 rounded-b-xl text-white font-strike">Don't watch keyboard while playing.
+                    </p>
+                </div>
+                <div class="flex justify-center items-center h-full">
+                    <p id="current-alphabet" class="text-black text-9xl font-bold uppercase">Y</p>
+                </div>
+            </div>
 
             <!-- keyboard -->
             <div>
@@ -56,6 +65,22 @@
                     <kbd class="kbd">/</kbd>
                   </div>
             </div>
+
+            <div class="flex justify-between w-3/4">
+                <button class="btn rounded-full bg-gray-800 text-white px-4">
+                    Life
+                    <img src="images/heart.svg" alt="">
+                    <span>1</span>
+                </button>
+                <button class="btn rounded-full bg-gray-800 text-white px-4">
+                    Score
+                    <img src="images/dollar.svg" alt="">
+                    <span>1</span>
+                </button>
+
+            </div>
+            </div>
+           
         </section>
         <section class="score"></section>
     </main>

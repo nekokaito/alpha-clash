@@ -13,16 +13,14 @@
         
     </nav>
     <main class=" min-h-screen">
-    <section class="home hidden">
-            <section id="home-screen" class="min-h-screen text-white flex justify-center items-center">
+         <section id="home-screen" class="min-h-screen text-white flex justify-center items-center">
                 <div class="flex flex-col items-center gap-10">
-                    <h1 class="text-8xl font-strike uppercase">Alpha Clash Pro</h1>
+                    <h1 class="text-8xl font-strike uppercase">Alpha Clash</h1>
                     <p class="font-strike">Unleash Your Keyboard KungFu : Press “Enter” to Play</p>
                     <button onclick="play()" class="btn bg-white font-strike text-black">Play Now</button>
                 </div>
         </section>
-        </section>
-        <section class="play-ground">
+        <section id="play" class="play-ground hidden">
             <div class=" flex flex-col justify-center items-center gap-5">
                   <!-- display -->
             <div class="artboard artboard-horizontal phone-5 border-[10px] rounded-2xl  border-[#1f293cc1] bg-[#ffffffbd] mt-32">
@@ -88,8 +86,17 @@
             </div>
            
         </section>
-        <section class="score"></section>
+        <section id="score" class="score flex justify-center items-center min-h-screen">
+            <div class="text-white text-center space-y-6 bg-[#FFFFFF33] p-4 rounded-xl">
+                <h1 class="text-8xl">
+                    <span class="font-extrabold font-strike p-2">Score :</span>
+                    <span class="font-strike">14</span>
+                </h1>
+                <button class="btn font-strike">Play Again</button>
+                <p class="font-strike">Practice will make you a Pro</p>
+            </div>
+        </section>
     </main>
-    
+    <script src="game.js"></script>
 </body>
 </html>

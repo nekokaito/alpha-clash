@@ -10,6 +10,7 @@ function continueGame() {
     const randomAlpha = getRandom();
     const displayAlpha = document.getElementById('display');
     displayAlpha.innerText = randomAlpha;
+    selectID(randomAlpha);
      
 }
 function getRandom() {
@@ -17,9 +18,10 @@ function getRandom() {
     const alpha = alphaString.slice('');
     const random = Math.random()*25;
     const i = Math.round(random);
-    
     let result = alpha[i];
-
     return result;
-    
+}
+function selectID(elementID) {
+  const element = document.getElementById(elementID);
+  element.classList.add('bg-blue-300');
 }

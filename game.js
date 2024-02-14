@@ -17,12 +17,19 @@ function continueGame() {
 function keyPress (e) {
     const press = e.key;
     const alpha = document.getElementById('display').innerText.toLowerCase();
+    const element = document.getElementById(alpha);
+    const scoreDisplay = document.getElementById('score');
+    const getScore = parseInt(scoreDisplay.innerText);
     
     if (alpha === press) {
-          
+        element.classList.remove('bg-blue-300');
+        const score = getScore + 5;
+        scoreDisplay.innerText = score;
           continueGame();
     }
     else{
+        const score = getScore - 5;
+        scoreDisplay.innerText = score;
         console.log('nope');
     }
 

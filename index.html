@@ -8,9 +8,15 @@
     <link rel="stylesheet" href="style.css">
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body id="bg" class="bg-[url('images/bg.png')]">
     <nav>
-        
+        <div class="dropdown">
+            <div tabindex="0" role="button" class="btn m-1">Theme</div>
+            <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+              <li><a onclick="changeDarkBG()">Dark</a></li>
+              <li><a onclick="changeBlueBG()">Blue</a></li>
+            </ul>
+          </div>
     </nav>
     <main class=" min-h-screen">
          <section id="home-screen" class="min-h-screen text-white flex justify-center items-center">

@@ -13,6 +13,23 @@ function continueGame() {
     selectID(randomAlpha);
      
 }
+ 
+function keyPress (e) {
+    const press = e.key;
+    const alpha = document.getElementById('display').innerText.toLowerCase();
+    
+    if (alpha === press) {
+          
+          continueGame();
+    }
+    else{
+        console.log('nope');
+    }
+
+}
+
+document.addEventListener('keyup', keyPress);
+
 function getRandom() {
     const alphaString = 'abcdefghijklmnopqrstuvwxyz';
     const alpha = alphaString.slice('');

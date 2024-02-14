@@ -3,6 +3,11 @@ function play() {
     home.classList.add('hidden');
     const play = document.getElementById('play');
     play.classList.remove('hidden');
+    const scoreDisplay = document.getElementById('score');
+    const lifeDisplay = document.getElementById('life');
+    scoreDisplay.innerText = '0';
+    lifeDisplay.innerText = '3';
+
     continueGame();
 }
 function gameOver() {
@@ -20,6 +25,11 @@ function playAgain() {
     play.classList.remove('hidden');
     const score = document.getElementById('scoreSection');
     score.classList.add('hidden');
+    const scoreDisplay = document.getElementById('score');
+    const lifeDisplay = document.getElementById('life');
+    scoreDisplay.innerText = '0';
+    lifeDisplay.innerText = '3';
+    
 }
 
 function continueGame() {
@@ -41,6 +51,8 @@ function keyPress (e) {
     const getLife = parseInt(lifeDisplay.innerText);
     const pointDisplay = document.getElementById('point');
 
+   
+
     if (alpha === press) {
         element.classList.remove('bg-blue-300');
         let score = getScore + 5;
@@ -52,6 +64,9 @@ function keyPress (e) {
         
           continueGame();
     }
+    else if (press === 'Escape') {
+        gameOver();
+    }
     else{
 
         let score = getScore - 5;
@@ -61,14 +76,12 @@ function keyPress (e) {
         }
         scoreDisplay.innerText = score;
         lifeDisplay.innerText = life;
-        
+        pointDisplay.innerText = score;
         console.log(life);
         if (life < 0) {
-            pointDisplay.innerText = score;
-            gameOver();
-            life = 0;
             
-    }
+            gameOver();
+      }
     }
   
 }

@@ -5,6 +5,22 @@ function play() {
     play.classList.remove('hidden');
     continueGame();
 }
+function gameOver() {
+    const play = document.getElementById('play');
+    play.classList.add('hidden');
+    const score = document.getElementById('scoreSection');
+    score.classList.remove('hidden');
+    
+    
+}
+function playAgain() {
+    const home = document.getElementById('home-screen');
+    home.classList.add('hidden');
+    const play = document.getElementById('play');
+    play.classList.remove('hidden');
+    const score = document.getElementById('scoreSection');
+    score.classList.add('hidden');
+}
 
 function continueGame() {
     const randomAlpha = getRandom();
@@ -13,6 +29,7 @@ function continueGame() {
     selectID(randomAlpha);
      
 }
+
  
 function keyPress (e) {
     const press = e.key;
@@ -20,19 +37,40 @@ function keyPress (e) {
     const element = document.getElementById(alpha);
     const scoreDisplay = document.getElementById('score');
     const getScore = parseInt(scoreDisplay.innerText);
-    
+    const lifeDisplay = document.getElementById('life');
+    const getLife = parseInt(lifeDisplay.innerText);
+    const pointDisplay = document.getElementById('point');
+
     if (alpha === press) {
         element.classList.remove('bg-blue-300');
-        const score = getScore + 5;
+        let score = getScore + 5;
+        if (score < 0) {
+            score = 0;
+        }
         scoreDisplay.innerText = score;
+        pointDisplay.innerText = score;
+        
           continueGame();
     }
     else{
-        const score = getScore - 5;
-        scoreDisplay.innerText = score;
-        console.log('nope');
-    }
 
+        let score = getScore - 5;
+        let life = getLife - 1;
+        if (score < 0) {
+            score = 0;
+        }
+        scoreDisplay.innerText = score;
+        lifeDisplay.innerText = life;
+        
+        console.log(life);
+        if (life < 0) {
+            pointDisplay.innerText = score;
+            gameOver();
+            life = 0;
+            
+    }
+    }
+  
 }
 
 document.addEventListener('keyup', keyPress);

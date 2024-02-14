@@ -54,9 +54,9 @@
                     <kbd id="f" class="kbd font-strike">f</kbd>
                     <kbd id="g" class="kbd font-strike">g</kbd>
                     <kbd id="h" class="kbd font-strike">h</kbd>
-                    <kbd id="j" class="kbd font-strike">j</kbd>
+                    <kbd id="j" class="kbd font-strike">J</kbd>
                     <kbd id="k" class="kbd font-strike">k</kbd>
-                    <kbd id="l" class="kb font-strike">l</kbd>
+                    <kbd id="l" class="kbd font-strike">L</kbd>
                   </div> 
                   <div class="flex justify-center gap-1 my-1 w-full">
                     <kbd id="z" class="kbd font-strike">z</kbd>
@@ -86,15 +86,18 @@
             </div>
            
         </section>
-        <section id="score" class="score flex justify-center items-center min-h-screen">
-            <div class="text-white text-center space-y-6 bg-[#FFFFFF33] p-4 rounded-xl">
-                <h1 class="text-8xl">
-                    <span class="font-extrabold font-strike p-2">Score :</span>
-                    <span class="font-strike">14</span>
-                </h1>
-                <button class="btn font-strike">Play Again</button>
-                <p class="font-strike">Practice will make you a Pro</p>
+        <section id="scoreSection" class="hidden">
+            <div class="flex justify-center items-center min-h-screen">
+                <div class="text-white text-center space-y-6 bg-[#FFFFFF33] p-4 rounded-xl">
+                    <h1 class="text-8xl">
+                        <span class="font-extrabold font-strike p-2">Score :</span>
+                        <span id="point" class="font-strike">14</span>
+                    </h1>
+                    <button onclick="playAgain()" class="btn font-strike">Play Again</button>
+                    <p class="font-strike">Practice will make you a Pro</p>
+                </div>
             </div>
+            
         </section>
     </main>
     <script src="game.js"></script>

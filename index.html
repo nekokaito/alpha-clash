@@ -13,8 +13,14 @@
         
     </nav>
     <main class=" min-h-screen">
-        <section class="home hidden">
-            <h1 class="font-strike">Hello</h1>
+    <section class="home hidden">
+            <section id="home-screen" class="min-h-screen text-white flex justify-center items-center">
+                <div class="flex flex-col items-center gap-10">
+                    <h1 class="text-8xl font-strike uppercase">Alpha Clash Pro</h1>
+                    <p class="font-strike">Unleash Your Keyboard KungFu : Press “Enter” to Play</p>
+                    <button onclick="play()" class="btn bg-white font-strike text-black">Play Now</button>
+                </div>
+        </section>
         </section>
         <section class="play-ground">
             <div class=" flex flex-col justify-center items-center gap-5">
@@ -25,54 +31,54 @@
                     </p>
                 </div>
                 <div class="flex justify-center items-center h-full">
-                    <p id="current-alphabet" class="text-black text-9xl font-bold uppercase">Y</p>
+                    <p id="current-alphabet" class="text-black text-9xl font-bold uppercase font-strike">Y</p>
                 </div>
             </div>
 
             <!-- keyboard -->
             <div>
                 <div class="flex justify-center gap-1 my-1 w-full">
-                    <kbd class="kbd">q</kbd>
-                    <kbd class="kbd">w</kbd>
-                    <kbd class="kbd">e</kbd>
-                    <kbd class="kbd">r</kbd>
-                    <kbd class="kbd">t</kbd>
-                    <kbd class="kbd">y</kbd>
-                    <kbd class="kbd">u</kbd>
-                    <kbd class="kbd">i</kbd>
-                    <kbd class="kbd">o</kbd>
-                    <kbd class="kbd">p</kbd>
+                    <kbd class="kbd font-strike">q</kbd>
+                    <kbd class="kbd font-strike">w</kbd>
+                    <kbd class="kbd font-strike">e</kbd>
+                    <kbd class="kbd font-strike">r</kbd>
+                    <kbd class="kbd font-strike">t</kbd>
+                    <kbd class="kbd font-strike">y</kbd>
+                    <kbd class="kbd font-strike">u</kbd>
+                    <kbd class="kbd font-strike">i</kbd>
+                    <kbd class="kbd font-strike">o</kbd>
+                    <kbd class="kbd font-strike">p</kbd>
                   </div> 
                   <div class="flex justify-center gap-1 my-1 w-full">
-                    <kbd class="kbd">a</kbd>
-                    <kbd class="kbd">s</kbd>
-                    <kbd class="kbd">d</kbd>
-                    <kbd class="kbd">f</kbd>
-                    <kbd class="kbd">g</kbd>
-                    <kbd class="kbd">h</kbd>
-                    <kbd class="kbd">j</kbd>
-                    <kbd class="kbd">k</kbd>
-                    <kbd class="kbd">l</kbd>
+                    <kbd class="kbd font-strike">a</kbd>
+                    <kbd class="kbd font-strike">s</kbd>
+                    <kbd class="kbd font-strike">d</kbd>
+                    <kbd class="kbd font-strike">f</kbd>
+                    <kbd class="kbd font-strike">g</kbd>
+                    <kbd class="kbd font-strike">h</kbd>
+                    <kbd class="kbd font-strike">j</kbd>
+                    <kbd class="kbd font-strike">k</kbd>
+                    <kbd class="kb font-strike">l</kbd>
                   </div> 
                   <div class="flex justify-center gap-1 my-1 w-full">
-                    <kbd class="kbd">z</kbd>
-                    <kbd class="kbd">x</kbd>
-                    <kbd class="kbd">c</kbd>
-                    <kbd class="kbd">v</kbd>
-                    <kbd class="kbd">b</kbd>
-                    <kbd class="kbd">n</kbd>
-                    <kbd class="kbd">m</kbd>
-                    <kbd class="kbd">/</kbd>
+                    <kbd class="kbd font-strike">z</kbd>
+                    <kbd class="kbd font-strike">x</kbd>
+                    <kbd class="kbd font-strike">c</kbd>
+                    <kbd class="kbd font-strike">v</kbd>
+                    <kbd class="kbd font-strike">b</kbd>
+                    <kbd class="kbd font-strike">n</kbd>
+                    <kbd class="kbd font-strike">m</kbd>
+                    
                   </div>
             </div>
 
             <div class="flex justify-between w-3/4">
-                <button class="btn rounded-full bg-gray-800 text-white px-4">
+                <button class="btn rounded-full bg-gray-800 text-white px-4 font-strike">
                     Life
                     <img src="images/heart.svg" alt="">
                     <span>1</span>
                 </button>
-                <button class="btn rounded-full bg-gray-800 text-white px-4">
+                <button class="btn rounded-full bg-gray-800 text-white px-4 font-strike">
                     Score
                     <img src="images/dollar.svg" alt="">
                     <span>1</span>

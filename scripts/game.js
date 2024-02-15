@@ -1,3 +1,27 @@
+
+
+
+function muteUnmute() {
+    let myAudio = document.getElementById("myAudio");
+    const mute = document.getElementById('mute');
+    const sound = document.getElementById('noMute');
+    const click = new Audio('../sounds/click.mp3');
+    
+  if (myAudio.muted === true) {
+    myAudio.muted = false;
+    mute.classList.add("hidden");
+    sound.classList.remove("hidden");
+    myAudio.play();
+  } else {
+    myAudio.muted = true;
+    sound.classList.add("hidden");
+    mute.classList.remove("hidden");
+    click.play();
+  }
+
+}
+
+
 function play() {
     const home = document.getElementById('home-screen');
     home.classList.add('hidden');

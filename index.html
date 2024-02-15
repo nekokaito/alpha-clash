@@ -6,11 +6,22 @@
     <title>Alpha Clash</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.0/dist/full.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="images/play.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body id="bg" class="bg-[url('images/bg.jpg')] max-w-full overflow-hidden">
-    <nav class="flex justify-end">
+    <nav class="flex justify-between">
+        <div class="mt-4 ml-3">
+            <audio id="myAudio" src="sounds/bg-tone.mp3" loop muted></audio>
+            <button onclick="muteUnmute()" id="mute" class="btn btn-circle">
+                <img class="w-5" src="images/mute.svg" alt="">
+              </button>
+              <button onclick="muteUnmute()" id="noMute" class="btn btn-circle hidden">
+                <img class="w-5" src="images/sound.svg" alt="">
+              </button>
+        </div>
+        
+          
         <div class="dropdown mt-4 mr-3">
             <div tabindex="0" role="button" class="btn m-1">Theme</div>
             <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">

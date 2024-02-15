@@ -5,8 +5,12 @@ function play() {
     play.classList.remove('hidden');
     const scoreDisplay = document.getElementById('score');
     const lifeDisplay = document.getElementById('life');
+    const commentDisplay = document.getElementById('comment');
+    const sound = new Audio('start.mp3');
+    sound.play();
     scoreDisplay.innerText = '0';
     lifeDisplay.innerText = '3';
+    commentDisplay.innerText = 'Practice will make you a Pro';
 
     continueGame();
 }
@@ -29,8 +33,12 @@ function playAgain() {
     score.classList.add('hidden');
     const scoreDisplay = document.getElementById('score');
     const lifeDisplay = document.getElementById('life');
+    const commentDisplay = document.getElementById('comment');
+    const sound = new Audio('start.mp3');
+    sound.play();
     scoreDisplay.innerText = '0';
     lifeDisplay.innerText = '3';
+    commentDisplay.innerText = 'Practice will make you a Pro';
     
 }
 
@@ -138,11 +146,16 @@ function selectID(elementID) {
   element.classList.add('bg-blue-300');
 }
 function changeBlueBG() {
+    const sound = new Audio('change.mp3');
+        sound.play();
     const getBG = document.getElementById('bg');
     getBG.classList.remove("bg-[url('images/bg.jpg')]");
     getBG.classList.add("bg-[url('images/blue-bg.jpg')]");
+    
 }
 function changeDarkBG() {
+    const sound = new Audio('change.mp3');
+        sound.play();
     const getBG = document.getElementById('bg');
     getBG.classList.remove("bg-[url('images/blue-bg.jpg')]");
     getBG.classList.add("bg-[url('images/bg.jpg')]");

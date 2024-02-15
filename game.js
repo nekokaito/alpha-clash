@@ -11,6 +11,8 @@ function play() {
     continueGame();
 }
 function gameOver() {
+    const sound = new Audio('finish.mp3');
+    sound.play();
     const play = document.getElementById('play');
     play.classList.add('hidden');
     const score = document.getElementById('scoreSection');
@@ -50,7 +52,7 @@ function keyPress (e) {
     const lifeDisplay = document.getElementById('life');
     const getLife = parseInt(lifeDisplay.innerText);
     const pointDisplay = document.getElementById('point');
-
+    const commentDisplay = document.getElementById('comment');
    
 
     if (alpha === press) {
@@ -67,8 +69,7 @@ function keyPress (e) {
           continueGame();
     }
     else if (press === 'Escape') {
-        const sound = new Audio('finish.mp3');
-        sound.play();
+        
         gameOver();
     }
     else{
@@ -83,6 +84,35 @@ function keyPress (e) {
         scoreDisplay.innerText = score;
         lifeDisplay.innerText = life;
         pointDisplay.innerText = score;
+
+        if (score>30) {
+            commentDisplay.innerText = 'You did well, Keep Going ON';
+        }
+        if (score>60) {
+            commentDisplay.innerText = 'Nice Try! Focus More';
+        }
+        if (score>100) {
+            commentDisplay.innerText = 'You crossed the century';
+        }
+        if (score>150) {
+            commentDisplay.innerText = 'You are Master at this Game';
+        }
+        
+        if (score>300) {
+            commentDisplay.innerText = 'Sigma exist Damm';
+        }
+        if (score>500) {
+            commentDisplay.innerText = 'OMG! You are breaking my game.';
+        }
+        if (score>1000) {
+            commentDisplay.innerText = 'Bro! >w< Contact Elon Musk';
+        }
+        if (score>5000) {
+            commentDisplay.innerText = 'No Comments for you, I am speechless';
+        }
+        
+        
+
         
         if (life < 0) {
             
@@ -109,12 +139,12 @@ function selectID(elementID) {
 }
 function changeBlueBG() {
     const getBG = document.getElementById('bg');
-    getBG.classList.remove("bg-[url('images/bg.png')]");
-    getBG.classList.add("bg-[url('images/blue-bg.png')]");
+    getBG.classList.remove("bg-[url('images/bg.jpg')]");
+    getBG.classList.add("bg-[url('images/blue-bg.jpg')]");
 }
 function changeDarkBG() {
     const getBG = document.getElementById('bg');
-    getBG.classList.remove("bg-[url('images/blue-bg.png')]");
-    getBG.classList.add("bg-[url('images/bg.png')]");
+    getBG.classList.remove("bg-[url('images/blue-bg.jpg')]");
+    getBG.classList.add("bg-[url('images/bg.jpg')]");
     
 }

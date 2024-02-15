@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="style.css">
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body id="bg" class="bg-[url('images/bg.png')]">
-    <nav>
-        <div class="dropdown">
+<body id="bg" class="bg-[url('images/bg.jpg')] max-w-full overflow-hidden">
+    <nav class="flex justify-end">
+        <div class="dropdown mt-4 mr-3">
             <div tabindex="0" role="button" class="btn m-1">Theme</div>
             <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
               <li><a onclick="changeDarkBG()">Dark</a></li>
@@ -22,7 +22,7 @@
          <section id="home-screen" class="min-h-screen text-white flex justify-center items-center">
                 <div class="flex flex-col items-center gap-10">
                     <h1 class="text-8xl font-strike uppercase">Alpha Clash</h1>
-                    <p class="font-strike">Unleash Your Keyboard KungFu : Press “Enter” to Play</p>
+                    <p class="font-strike">Unleash Your Keyboard KungFu : Click to Play</p>
                     <button onclick="play()" class="btn bg-white font-strike text-black">Play Now</button>
                 </div>
         </section>
@@ -100,7 +100,7 @@
                         <span id="point" class="font-strike">0</span>
                     </h1>
                     <button onclick="playAgain()" class="btn font-strike">Play Again</button>
-                    <p class="font-strike">Practice will make you a Pro</p>
+                    <p id="comment" class="font-strike">Practice will make you a Pro</p>
                 </div>
             </div>
             

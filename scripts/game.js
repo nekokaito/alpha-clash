@@ -6,7 +6,7 @@ function play() {
     const scoreDisplay = document.getElementById('score');
     const lifeDisplay = document.getElementById('life');
     const commentDisplay = document.getElementById('comment');
-    const sound = new Audio('start.mp3');
+    const sound = new Audio('../sounds/start.mp3');
     sound.play();
     scoreDisplay.innerText = '0';
     lifeDisplay.innerText = '3';
@@ -15,7 +15,8 @@ function play() {
     continueGame();
 }
 function gameOver() {
-    const sound = new Audio('finish.mp3');
+    document.removeEventListener('keyup', keyPress);
+    const sound = new Audio('../sounds/finish.mp3');
     sound.play();
     const play = document.getElementById('play');
     play.classList.add('hidden');
@@ -34,12 +35,12 @@ function playAgain() {
     const scoreDisplay = document.getElementById('score');
     const lifeDisplay = document.getElementById('life');
     const commentDisplay = document.getElementById('comment');
-    const sound = new Audio('start.mp3');
+    const sound = new Audio('../sounds/start.mp3');
     sound.play();
     scoreDisplay.innerText = '0';
     lifeDisplay.innerText = '3';
     commentDisplay.innerText = 'Practice will make you a Pro';
-    
+    document.addEventListener('keyup', keyPress);
 }
 
 function continueGame() {
@@ -47,6 +48,7 @@ function continueGame() {
     const displayAlpha = document.getElementById('display');
     displayAlpha.innerText = randomAlpha;
     selectID(randomAlpha);
+    document.addEventListener('keyup', keyPress);
      
 }
 
@@ -64,7 +66,7 @@ function keyPress (e) {
    
 
     if (alpha === press) {
-        const sound = new Audio('correct.mp3');
+        const sound = new Audio('../sounds/correct.mp3');
         sound.play();
         element.classList.remove('bg-blue-300');
         let score = getScore + 5;
@@ -81,7 +83,7 @@ function keyPress (e) {
         gameOver();
     }
     else{
-        const sound = new Audio('wrong.mp3');
+        const sound = new Audio('../sounds/wrong.mp3');
         sound.play();
         let score = getScore - 5;
         let life = getLife - 1;
@@ -131,7 +133,7 @@ function keyPress (e) {
   
 }
 
-document.addEventListener('keyup', keyPress);
+
 
 function getRandom() {
     const alphaString = 'abcdefghijklmnopqrstuvwxyz';
@@ -146,7 +148,7 @@ function selectID(elementID) {
   element.classList.add('bg-blue-300');
 }
 function changeBlueBG() {
-    const sound = new Audio('change.mp3');
+    const sound = new Audio('../sounds/change.mp3');
         sound.play();
     const getBG = document.getElementById('bg');
     getBG.classList.remove("bg-[url('images/bg.jpg')]");
@@ -154,7 +156,7 @@ function changeBlueBG() {
     
 }
 function changeDarkBG() {
-    const sound = new Audio('change.mp3');
+    const sound = new Audio('../sounds/change.mp3');
         sound.play();
     const getBG = document.getElementById('bg');
     getBG.classList.remove("bg-[url('images/blue-bg.jpg')]");

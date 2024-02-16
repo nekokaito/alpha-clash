@@ -108,6 +108,10 @@ function keyPress (e) {
         
         gameOver();
     }
+    else if (press === 'CapsLock') {
+                 
+        document.addEventListener('keydown', CapsON);
+    }
     else{
         const sound = new Audio('../sounds/wrong.mp3');
         sound.play();

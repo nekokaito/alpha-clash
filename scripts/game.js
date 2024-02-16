@@ -65,6 +65,7 @@ function playAgain() {
     lifeDisplay.innerText = '3';
     commentDisplay.innerText = 'Practice will make you a Pro';
     document.addEventListener('keyup', keyPress);
+    document.addEventListener('keydown', CapsON);
 }
 
 function continueGame() {
@@ -73,6 +74,7 @@ function continueGame() {
     displayAlpha.innerText = randomAlpha;
     selectID(randomAlpha);
     document.addEventListener('keyup', keyPress);
+    document.addEventListener('keydown', CapsON);
      
 }
 
@@ -187,10 +189,16 @@ function changeDarkBG() {
     getBG.classList.add("bg-[url('images/bg.jpg')]");
     
 }
-document.addEventListener('keydown', Caps);
-function Caps(e){
-    e = e.key;
-    if (e === 'CapsLock') {
-        alert("Your Caps Lock is ON, Please off otherwise not work.");
+
+
+function CapsON(e){
+    const alert = document.getElementById('alert');
+    
+    if (e.getModifierState && e.getModifierState('CapsLock')) {
+        alert.classList.remove('hidden');
+      }
+    else {
+        alert.classList.add('hidden');
     }
+    
 }

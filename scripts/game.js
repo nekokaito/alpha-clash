@@ -187,3 +187,10 @@ function changeDarkBG() {
     getBG.classList.add("bg-[url('images/bg.jpg')]");
     
 }
+document.addEventListener('keydown', Caps);
+function Caps(e){
+    e = e.key;
+    if (e === 'CapsLock') {
+        alert("Your Caps Lock is ON, Please off otherwise not work.");
+    }
+}
